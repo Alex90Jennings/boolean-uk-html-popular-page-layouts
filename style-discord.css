@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.main-page-container {
+    display: grid;
+
+    grid-template: 
+    "left-menu sign-in-menu content-page" 1fr /
+    50px 300px 1fr
+    ;
+}
+.left-menu {
+    grid-area: left-menu;
+}
+.sign-in-menu {
+    grid-area: sign-in-menu;
+}
+.content-page {
+    grid-area: content-page;
+}
