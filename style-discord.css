@@ -4,6 +4,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 .main-page-container {
     display: grid;
@@ -12,13 +13,103 @@ body {
     "left-menu sign-in-menu content-page" 1fr /
     50px 300px 1fr
     ;
+    
+    min-height: 100vh;
 }
 .left-menu {
     grid-area: left-menu;
+    background-color: rgb(155, 155, 155);
 }
 .sign-in-menu {
     grid-area: sign-in-menu;
+    background-color: rgb(184, 183, 183);
+
+    display: grid;
+    grid-template: 
+    "boolean-uk" 50px
+    "general" 4.5fr
+    "classes" 3.5fr
+    "lobby" 2fr
+    "staff" 3.5fr
+    "status" 1fr /
+    1fr
+    ;
+}
+.boolean-uk {
+    grid-area: boolean-uk;
+    background-color: rgb(184, 183, 183);
+    font-weight: bold;
+    padding: 5px;
+}
+.general {
+    grid-area: general;
+    background-color: rgb(184, 183, 183);
+}
+.classes {
+    grid-area: classes;
+    background-color: rgb(184, 183, 183);
+}
+.lobby {
+    grid-area: lobby;
+    background-color: rgb(184, 183, 183);
+}
+.staff {
+    grid-area: staff;
+    background-color: rgb(184, 183, 183);
+}
+.status {
+    grid-area: status;
+    background-color: rgb(184, 183, 183);
 }
 .content-page {
     grid-area: content-page;
+    background-color: rgb(230, 230, 230);
+
+    display: grid;
+    grid-template: 
+    "header" 50px
+    "content" 13fr
+    "message" 1.5fr /
+    1fr
+    ;
+}
+.header {
+    grid-area: header;
+    background-color: rgb(230, 230, 230);
+    font-weight: bold;
+    padding: 5px;
+}
+.content {
+    grid-area: content;
+    background-color: rgb(230, 230, 230);
+}
+.message {
+    grid-area: message;
+    background-color: rgb(230, 230, 230);
+}
+.boolean-uk,
+.header {
+    border-bottom: 2px solid rgb(155, 155, 155);;
+}
+.content {
+    padding: 10px;
+}
+h1 {
+    font-size: xx-large;
+    padding-top: 1300px;
+    margin-bottom: 0;
+}
+h2 {
+    font-size: large;
+    color: rgb(0, 102, 255);
+}
+h3 {
+    font-size: normal;
+    color: limegreen;
+    padding-left: 50px;
+    margin-bottom: 0;
+}
+.nic-message p {
+    padding-left: 50px;
+    margin-top: 5px;
 }
