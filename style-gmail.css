@@ -7,41 +7,33 @@
     height: 100vh;
     display: grid;
     grid-template:
-      "Top-Bar Top-Bar Top-Bar Top-Bar" 50px
+      "Top-Bar Top-Bar Top-Bar Top-Bar" 60px
       "Left-Menu Emails Settings Shortcuts" 1fr /
       220px 1fr 240px 40px;
   }
   /*TOP BAR*/
   .Top-Bar {
     grid-area: Top-Bar;
-    background-color: #ff000050;
+    background-color: rgb(245, 245, 245);
     display: grid;
     grid-template-columns: 210px 1fr 280px;
     grid-gap: 5px;
+    border-bottom: 1px rgba(128, 128, 128, 0.596) solid;
   }
   /* LOGO*/
   .Top-Bar .Logo {
-    border: 1px dashed black;
     display: grid;
     grid-template-columns: 50px 1fr;
     padding: 5px;
     grid-gap: 5px;
   }
-  .Top-Bar .Logo .Menu-Icon {
-    border: 1px dashed black;
-  }
-  .Top-Bar .Logo .Gmail-Logo {
-    border: 1px dashed black;
-  }
   /*SEARCH*/
   .Top-Bar .Search {
-    border: 1px dashed black;
     display: grid;
     padding: 5px;
   }
   /*MENU*/
   .Top-Bar .Menu {
-    border: 1px dashed black;
     grid-template-columns: 35px 35px 35px 100px;
     display: grid;
     justify-content: right;
@@ -49,26 +41,15 @@
     grid-gap: 5px;
     padding-left: 50px;
   }
-  .Top-Bar .Menu .Help,
-  .Top-Bar .Menu .Gear,
-  .Top-Bar .Menu .Options,
-  .Top-Bar .Menu .Profile {
-    border: 1px dashed black;
-  }
   /*LEFT MENU*/
   .Left-Menu {
     grid-area: Left-Menu;
-    background-color: #00ff0050;
+    background-color: rgb(250, 249, 249);
     display: grid;
     grid-template-rows: 50px 2fr 80px 1fr;
     padding: 5px;
     grid-gap: 5px;
-  }
-  .Left-Menu .Compose,
-  .Left-Menu .Folders,
-  .Left-Menu .Meet,
-  .Left-Menu .Chat {
-    border: 1px dashed black;
+    border-right: 1px rgba(128, 128, 128, 0.589) solid;
   }
   .Left-Menu .Folders {
     display: grid;
@@ -81,28 +62,25 @@
     padding: 5px;
   }
   .Left-Menu .Folders li {
-    border: 1px dashed black;
     display: grid;
     align-items: center;
     grid-template-columns: 30px 1fr 20px;
   }
-  .Left-Menu .Folders .li div {
-    border: 1px dashed black;
-  }
   /*EMAILS*/
   .Emails {
     grid-area: Emails;
-    background-color: #0000ff50;
+    background-color: rgb(250, 249, 249);;
   }
   /*SETTINGS*/
   .Settings {
     grid-area: Settings;
-    background-color: #ff00ff50;
+    background-color: rgb(250, 249, 249);
+    border: 1px rgba(128, 128, 128, 0.589) solid;
   }
   /*SHORTCUTS*/
   .Shortcuts {
     grid-area: Shortcuts;
-    background-color: #ffff0050;
+    background-color: rgb(233, 232, 232);;
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
@@ -127,4 +105,10 @@
         50px 1fr;
     }
   }
-  
+  .Logo img,
+  .Menu img {
+      width: 40px;
+  }
+  .Folders img {
+      width: 25px;
+  }
